@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: 
+  name: server_hospital-depl
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: server_hospital
+  template:
+    metadata:
+      labels:
+        app: server_hospital     
+    spec:
+      containers:
+        - name : server_hospital
+          image:  dilshadjr3312/dilshadjr3312/server_hospital    
+
